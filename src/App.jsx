@@ -12,7 +12,7 @@ const Home = () => (
 const About = () => (
   <section className="p-10">
     <h2 className="text-3xl font-bold">Sobre mí</h2>
-    <p className="mt-2">🚀 Soy un Desarrollador Fullstack Jr 
+    <p>🚀 Soy un Desarrollador Fullstack Jr 
     con experiencia en la creación de aplicaciones web dinámicas y escalables. 
     Me especializo en el desarrollo tanto del frontend como del backend, 
     aplicando buenas prácticas de programación y optimización del rendimiento.
