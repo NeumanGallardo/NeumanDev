@@ -11,7 +11,7 @@ const Home = () => (
 
 const About = () => (
   <section className="p-10">
-    <h2 className="text-3xl font-bold">Sobre mí</h2>
+    <h2 className="text-3xl font-bold text-blue-400">Sobre mí</h2>
     <p>🚀 Soy un Desarrollador Fullstack Jr 
     con experiencia en la creación de aplicaciones web dinámicas y escalables. 
     Me especializo en el desarrollo tanto del frontend como del backend, 
@@ -44,7 +44,7 @@ const Contact = () => (
 const App = () => {
   return (
     <Router>
-      <nav className="p-4 bg-gray-800 text-white flex justify-around">
+      <nav className="p-4 bg-green-500 text-black flex justify-around">
         <Link to="/">Inicio</Link>
         <Link to="/about">Sobre mí</Link>
         <Link to="/projects">Proyectos</Link>
