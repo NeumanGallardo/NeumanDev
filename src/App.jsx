@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //import './App.css';
 import './index.css';
-
+import Contact from "./Components/Contact";
 const Home = () => (
   <section className="text-center p-10">
     <h1 className="text-4xl font-bold">¡Hola, soy Erik Neuman Gallardo Castillo</h1>
@@ -34,16 +34,10 @@ const Projects = () => (
   </section>
 );
 
-const Contact = () => (
-  <section className="p-10">
-    <h2 className="text-3xl font-bold">Contacto</h2>
-    <p className="mt-2">Formulario o información de contacto.</p>
-  </section>
-);
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/my-portfolio/">
       <nav className="p-4 bg-green-500 text-black flex justify-around">
         <Link to="/">Inicio</Link>
         <Link to="/about">Sobre mí</Link>
