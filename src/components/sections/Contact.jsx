@@ -1,4 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import linkedin from '..//..//assets/linkedin.png'
+import github from '..//..//assets/github.png'
+import gmail from '..//..//assets/gmail.png'
 
 export const Contact = () => {
   return (
@@ -32,7 +35,7 @@ export const Contact = () => {
               className="w-18 h-18 rounded-full bg-gray-300 flex items-center justify-center transition hover:scale-110 hover:bg-gray-200"
             >
               <img
-                src="src\assets\linkedin.png" // Asegúrate de tener esta imagen en tu proyecto
+                src={linkedin} // Asegúrate de tener esta imagen en tu proyecto
                 alt="LinkedIn"
                 className="w-14 h-14"
               />
@@ -46,7 +49,7 @@ export const Contact = () => {
               className="w-18 h-18 rounded-full bg-gray-300 flex items-center justify-center transition hover:scale-110 hover:bg-gray-200"
             >
               <img
-                src="src\assets\github.png" // Asegúrate de tener esta imagen en tu proyecto
+                src={github} // Asegúrate de tener esta imagen en tu proyecto
                 alt="GitHub"
                 className="w-15 h-15"
               />
@@ -60,7 +63,7 @@ export const Contact = () => {
               className="w-18 h-18 rounded-full bg-gray-300 flex items-center justify-center transition hover:scale-110 hover:bg-gray-200"
             >
               <img
-                src="src\assets\gmail.png" // Asegúrate de tener esta imagen en tu proyecto
+                src={gmail}// Asegúrate de tener esta imagen en tu proyecto
                 alt="Gmail"
                 className="w-13 h-13"
               />
