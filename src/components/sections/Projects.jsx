@@ -55,13 +55,12 @@ export const Projects = () => {
               transition-all
             "
             >
-              <h3 className="text-xl font-bold mb-2">AI Analytics Dashboard</h3>
+              <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500">PI Drivers</h3>
               <p className="text-gray-400 mb-4">
-                ML-powered data visualization platform with predictive analytics
-                and interactive reports.
+              	Es una SPA que renderiza pilotos de automóviles, También puedes crear tu propio "Driver".
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Python", "TensorFlow", "D3.js", "Flask"].map((tech, key) => (
+                {["javaScript","React", "Redux", "Axios", "node.js","Express","Sequelize","posgreSQL"].map((tech, key) => (
                   <span
                     key={key}
                     className="
@@ -78,15 +77,15 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#"
+                  href="https://github.com/NeumanGallardo/PI_drivers_F1"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  View Project →
+                  Ver Proyecto →
                 </a>
               </div>
             </div>
 
-            <div
+            {/* <div
               className="
               glass p-6 rounded-xl border border-white/10 
               hover:-translate-y-1 hover:border-blue-500/30
@@ -125,9 +124,9 @@ export const Projects = () => {
                   View Project →
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className="
               glass p-6 rounded-xl border border-white/10 
               hover:-translate-y-1 hover:border-blue-500/30
@@ -163,8 +162,8 @@ export const Projects = () => {
                 >
                   View Project →
                 </a>
-              </div>
-            </div>
+              </div> 
+            </div>*/}
           </div>
         </div>
       </RevealOnScroll>
