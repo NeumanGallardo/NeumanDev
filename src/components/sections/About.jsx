@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import logo from '..//..//assets/henry.png'
 
 export const About = () => {
   const frontendSkills = [
@@ -66,15 +67,21 @@ export const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
+              <h3 className="text-xl font-bold mb-4"> 🏫 Educación </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong> B.S. in Computer Science </strong> - XYZ University
-                  (2016-2020)
+                <strong> Academia SOY HENRY  </strong><br/>
+                Full Stack Web Development<br/>Graduado 2024
+                <a href="https://www.soyhenry.com/"   
+                target="_blank" 
+                rel="noopener noreferrer">
+                <img src={logo} alt="Logo" className="w-15 h-auto p-1"  /> 
+                </a>
+                
                 </li>
                 <li>
-                  Relevant Coursework: Data Structures, Web Development, Cloud
-                  Computing...
+                <strong> Colegio JOSE ANTONIO ZAMPA </strong>
+                 Sucre - Bolivia <br/>Bachiller Graduado 2013
                 </li>
               </ul>
             </div>
