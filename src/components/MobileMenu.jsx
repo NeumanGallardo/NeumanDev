@@ -1,42 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
-  const handleClick = (e, target) => {
+  const [clickedLabel, setClickedLabel] = useState(null);
+
+  const handleClick = (e, target, label) => {
     e.preventDefault();
-    const el = e.currentTarget;
+    setClickedLabel(label); // Activa la animación
 
-    // Cambios de color secuenciales
-    el.style.transition = "color 0.5s ease";
-
-    el.style.color = "rgb(135,206,235)"; // Celeste
-    setTimeout(() => {
-      el.style.color = "rgb(65,105,225)"; // Azul
-    }, 1000);
-
-    // Después de 2s: cierra el menú y hace scroll
+    // Cierra el menú y hace scroll suave después de la animación
     setTimeout(() => {
       setMenuOpen(false);
       document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
-    }, 2000);
+      setClickedLabel(null); // Reinicia el estado para futuras animaciones
+    }, 500); // Esperamos 0.5s para que se vea la animación
   };
 
   return (
-    <div className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
+    <div
+      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
         transition-all duration-300 ease-in-out
-        ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : " h-0 opacity-0 pointer-events-none"}
-      `} 
+        ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"}
+      `}
     >
       {/* Botón de cierre */}
       <button
         onClick={() => setMenuOpen(false)}
         className="absolute top-6 right-6 text-white text-[48px] leading-none cursor-pointer z-50
-                   transition duration-300 active:text-transparent active:bg-clip-text active:bg-[linear-gradient(to_right,_rgb(135,206,235),_rgb(65,105,225),_rgb(147,112,219))]"
+                   transition duration-300 active:text-transparent active:bg-clip-text active:bg-gradient-to-r active:from-sky-400 active:via-blue-600 active:to-purple-500"
         aria-label="Close Menu"
       >
         &times;
       </button>
 
-      {/* Enlaces con animación de color al hacer click */}
+      {/* Enlaces del menú con gradiente y animación al hacer click */}
       {[
         { label: "Inicio", href: "#home" },
         { label: "Sobre Mi", href: "#about" },
@@ -46,9 +42,11 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         <a
           key={label}
           href={href}
-          onClick={(e) => handleClick(e, href)}
-          className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+          onClick={(e) => handleClick(e, href, label)}
+          className={`text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500 my-4
+            transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}
+            ${clickedLabel === label ? "scale-110" : ""}
           `}
         >
           {label}
@@ -57,3 +55,4 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
     </div>
   );
 };
+

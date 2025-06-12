@@ -13,7 +13,9 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           flex items-center justify-between p-4 bg-gray-80">
             {" "}
             <img src={logo} alt="Logo" className="w-20 h-auto p-1"  />
-            <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500">NeumanDev</span>{" "}
+            <span className="text-2xl font-bold text-transparent 
+            bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500 
+            transition-transform duration-300 hover:scale-110">NeumanDev</span>{" "}
             
           </a>
 
@@ -27,33 +29,29 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-gray-300
-              hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-sky-400 hover:via-blue-600 hover:to-purple-500 transition duration-300"
-            >
+              className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500 
+             transition-transform duration-300 hover:scale-110">
               {" "}
               Inicio
             </a>
             <a
               href="#about"
-              className="text-gray-300 
-              hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-sky-400 hover:via-blue-600 hover:to-purple-500 transition duration-300"
-            >
+              className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500 
+             transition-transform duration-300 hover:scale-110">
               {" "}
               Sobre Mi{" "}
             </a>
             <a
               href="#projects"
-              className="text-gray-300 
-              hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-sky-400 hover:via-blue-600 hover:to-purple-500 transition duration-300"
-            >
+              className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500 
+             transition-transform duration-300 hover:scale-110">
               {" "}
               Proyectos{" "}
             </a>
             <a
               href="#contact"
-              className="text-gray-300 
-              hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-sky-400 hover:via-blue-600 hover:to-purple-500 transition duration-300"
-            >
+              className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-600 to-purple-500 
+             transition-transform duration-300 hover:scale-110">
               {" "}
               Contacto{" "}
             </a>
